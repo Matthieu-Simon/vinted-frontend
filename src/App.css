@@ -1,0 +1,85 @@
+/************************** HOMEPAGE **************************/
+/************************** Header **************************/
+.header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.banner {
+  border: 1px solid green;
+  height: 400px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.content-banner {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article {
+  border: 1px solid black;
+  padding: 10px;
+  width: 250px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.header-article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.header-article img {
+  border-radius: 50%;
+}
+
+.img-article {
+  width: 250px;
+  height: 300px;
+}
+
+/************************** PAGE OFFER **************************/
+.offer-article {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.article-details {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 30px;
+}
+
+.img-offer {
+  height: 600px;
+  object-fit: cover;
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(17, 17, 17, .1);
+}
