@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
+import Logo from '../img/logo.png';
 
 
 const Header = () => {
     return (
         <header className="header">
-            {/* <img /> */}
-            <h2>Logo Vinted</h2>
+            <img className="logo" src={Logo} alt="Logo Vinted" />
             <div>
                 <div>
                     Search Bar - Recherche des articles
@@ -15,17 +14,13 @@ const Header = () => {
                     Prix entre : 0€ & 1000€
                 </div>
             </div>
-            <div>
-                <button>S&apos;inscrire</button>
-                <button>Se connecter</button>
+
+            <div className="section-register">
+                <button className="btn-register">S&apos;inscrire</button>
+                <button className="btn-login">Se connecter</button>
             </div>
 
-            <div>
-                <Link to='/'>Home</Link>
-                {/* <Link to='/offer'>Offer</Link> */}
-            </div>
-
-            <button>Vends tes articles</button>
+            <button className="btn-sell">Vends tes articles</button>
         </header>
     )
 }

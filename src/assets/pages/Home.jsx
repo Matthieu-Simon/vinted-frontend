@@ -37,15 +37,15 @@ const Home = () => {
                 const marque = getDetail(offer.product_details, "MARQUE");
 
                 return (
-                    <Link key={offer._id} to={`offer/${offer._id}`}>
+                    <Link className="link-article" key={offer._id} to={`offer/${offer._id}`}>
                         <div className="article">
                             <div className="header-article">
-                                <img style={{width: 20 + "px"}} src={offer.owner.account.avatar.secure_url} alt="Logo User" />
-                                <h2>{offer.owner.account.username}</h2>
+                                <img src={offer.owner.account.avatar.secure_url} alt="Logo User" />
+                                <h2 className="title-header-article">{offer.owner.account.username}</h2>
                             </div>
                             <img className="img-article" src={offer.product_image.secure_url} alt="Photo article" />
                             <div className="infos-article">
-                                <span className="price-article">{offer.product_price.toFixed()}€</span>
+                                <span className="price-article">{offer.product_price.toFixed()} €</span>
                                 {taille && <span className="size-article">{taille}</span>}
                                 {marque && <span className="mark-article">{marque}</span>}
                             </div>
