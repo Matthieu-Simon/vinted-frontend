@@ -1,0 +1,37 @@
+/************************** HERO **************************/
+.hero {
+    background-image: url('../img/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 455px;
+    width: 100%;
+    position: relative;
+}
+
+.content-hero {
+    height: 220px;
+    width: 360px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 3px;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    box-shadow: 0 0 2px #1111113d;
+}
+
+.btn-hero {
+    height: 45px;
+    width: 190px;
+    background-color: #2cb1ba;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 14px;
+    margin-top: 32px;
+}

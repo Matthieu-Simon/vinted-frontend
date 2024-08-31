@@ -1,0 +1,64 @@
+/************************** HOMEPAGE **************************/
+/************************** MAIN **************************/
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1280px;
+    margin: 30px auto auto;
+}
+/************************** ARTICLES **************************/
+.link-article {
+    text-decoration: none;
+    color: #999;
+    width: 235px;
+    padding: 0 6px 16px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.article {
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+}
+
+.header-article {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.header-article h2 {
+    font-size: 12px;
+}
+
+.header-article img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.img-article {
+    width: 235px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.infos-article {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.price-article {
+    color: #000;
+    font-size: 14px;
+}
+
+.size-article, .mark-article {
+    font-size: 13px;
+    margin: 2px 0;
+}

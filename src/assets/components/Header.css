@@ -1,0 +1,98 @@
+/************************** Header **************************/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.searchbar-filter {
+    position: relative;
+}
+
+.searchbar {
+    width: 590px;
+    height: 37px;
+    padding-left: 40px;
+    background-color: #f5f6f7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Maison Neue', sans-serif;
+    font-size: 16px;
+}
+
+.filter-price {
+    margin-top: 25px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-text, .text-range {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.checkbox-filter {
+    margin-right: 25px;
+}
+
+.checkbox-filter input[name=price] {
+    display: none;
+}
+
+.btn-register, .btn-login {
+    border: 1px solid #2cb1ba;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2cb1ba;
+    height: 30px;
+    width: 115px;
+    outline: none;
+}
+
+.wrapper {
+    background: #2cb1ba;
+    border-radius: 10px;
+    width: 42px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 100%;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    transition: left .1s ease-in-out 0s;
+    font-weight: bold;
+}
+
+.arrow-up {
+    margin-top: 2px;
+}
+
+.btn-register {
+    margin-right: 20px;
+}
+
+.btn-sell {
+    background-color: #2cb1ba;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}

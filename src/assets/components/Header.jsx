@@ -1,17 +1,32 @@
 import Logo from '../img/logo.png';
-
+import './Header.css';
 
 const Header = () => {
     return (
         <header className="header">
             <img className="logo" src={Logo} alt="Logo Vinted" />
             <div>
-                <div>
-                    Search Bar - Recherche des articles
-                </div>
-                <div>
-                    Trier par prix
-                    Prix entre : 0€ & 1000€
+                <div className="searchbar-filter">
+                    <input 
+                        type="text" 
+                        className="searchbar" 
+                        placeholder="Recherche des articles"
+                    />
+                    <div className="filter-price">
+                        <span className="filter-text">Trier par prix :</span>
+                        <span className="checkbox-filter">
+                            <input type="checkbox" name="price" />
+                            <div className="wrapper">
+                                <div className="arrow">
+                                    <span className="arrow-up">⇡</span>
+                                </div>
+                            </div>
+                        </span>
+                        <span className="text-range">Prix entre :</span>
+                        <div className="range-bar">
+                            Range
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import './Home.css';
+
 import Hero from '../components/Hero';
 
 const Home = () => {

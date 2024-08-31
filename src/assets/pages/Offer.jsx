@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+import './Offer.css';
+
 
 const Offer = () => {
     const [data, setData] = useState({});
@@ -27,13 +29,16 @@ const Offer = () => {
 
     return (
         isLoading ? <span>Loading....</span> : (
-            <main className="offer-article">
-                <div className="article-details">
-                    <img className="img-offer" src={data.product_image.secure_url} alt="Photo article" />
-                    <div>
+            <div className="offer-body">
+                <div className="offer-container">
+                    <div className="offer-pictures">
+                        <img className="img-offer" src={data.product_image.secure_url} alt="Photo article" />
+                    </div>
+                    
+                    <div className="offer-infos">
                         <div className="offer-details">
-                            <span>{data.product_price} €</span>
-                            <ul>
+                            <span className="offer-price">{data.product_price} €</span>
+                            <ul className="offer-list">
                                 {data.product_details.map((detail, index) => {
                                     {/* console.log(detail) */}
                                     const key = Object.keys(detail)[0];
@@ -41,27 +46,28 @@ const Offer = () => {
 
                                     return (
                                         <li key={index}>
-                                            {key} : {value}
+                                            <span>{key}</span>   
+                                            <span>{value}</span>
                                         </li>
                                     )
                                 })}
                             </ul>
                         </div>
+
                         <div className="divider"></div>
+
                         <div className="description-offer">
-                            <div>
-                                <h3>{data.product_name}</h3>
-                                <span>{data.product_description}</span>
-                            </div>
-                            <div>
+                            <h3 className="title">{data.product_name}</h3>
+                            <p className="description">{data.product_description}</p>
+                            <div className="offer-avatar">
                                 <img className="avatar-user-offer" src={data.owner.account.avatar.secure_url} alt="Avatar Username" />
                                 <span>{data.owner.account.username}</span>
                             </div>
                         </div>
-                        <button>Acheter</button>
+                        <button className="btn-offer">Acheter</button>
                     </div>
                 </div>
-            </main>
+            </div>
         )
     )
 }
