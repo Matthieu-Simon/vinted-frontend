@@ -1,14 +1,31 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import './Offer.css';
 
 
-const Offer = () => {
+const Offer = ({ userToken }) => {
     const [data, setData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    const handleSubmit = () => {
+        if (userToken) {
+            navigate('/payment', {
+                state: {
+                    productId: data._id,
+                    productName: data.product_name,
+                    productPrice: data.product_price,
+                    productImage: data.product_image.secure_url,
+                    ownerName: data.owner.account.username
+                },
+            });
+        } else {
+            navigate('/login');
+        }
+    };
 
     useEffect(() => {
         // console.log('useEffect');
@@ -21,7 +38,6 @@ const Offer = () => {
                 setIsLoading(false);
             } catch(error) {
                 console.log(error);
-                
             }
         }
         fetchData();
@@ -64,7 +80,12 @@ const Offer = () => {
                                 <span>{data.owner.account.username}</span>
                             </div>
                         </div>
-                        <button className="btn-offer">Acheter</button>
+                        <button 
+                            className="btn-offer"
+                            onClick={handleSubmit}
+                        >
+                            Acheter
+                        </button>
                     </div>
                 </div>
             </div>

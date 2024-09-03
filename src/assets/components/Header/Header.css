@@ -56,6 +56,16 @@
     outline: none;
 }
 
+.btn-logout {
+    border: 1px solid #cc2c2c;
+    border-radius: 5px;
+    background-color: #cc2c2c;
+    color: #fff;
+    height: 30px;
+    width: 115px;
+    outline: none;
+}
+
 .wrapper {
     background: #2cb1ba;
     border-radius: 10px;

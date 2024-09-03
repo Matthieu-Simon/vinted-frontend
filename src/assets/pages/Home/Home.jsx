@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './Home.css';
 
-import Hero from '../components/Hero';
+import Hero from '../../components/Hero/Hero';
 
 const Home = () => {
     const [data, setData] = useState({});
@@ -42,7 +42,9 @@ const Home = () => {
                     <Link className="link-article" key={offer._id} to={`offer/${offer._id}`}>
                         <div className="article">
                             <div className="header-article">
-                                <img src={offer.owner.account.avatar.secure_url} alt="Logo User" />
+                                {offer.owner.account.avatar && offer.owner.account.avatar.secure_url && (
+                                    <img src={offer.owner.account.avatar.secure_url} alt="Logo User" />
+                                )}
                                 <h2 className="title-header-article">{offer.owner.account.username}</h2>
                             </div>
                             <img className="img-article" src={offer.product_image.secure_url} alt="Photo article" />
